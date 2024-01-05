@@ -1,7 +1,6 @@
 package DropdownHandling;
 
-import java.time.Duration;
-
+import java.time.Duration; 
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class selectByIndex {
+public class getFirstSelectedOption {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		//lunch the browser
 		WebDriver driver=new ChromeDriver();
@@ -21,13 +20,19 @@ public class selectByIndex {
 	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	    //lunch the application
 	    driver.get("https://demoapps.qspiders.com/dropdown/multiselect?sublist=1");
+	    Thread.sleep(3000);
 	    //identify the multi-select dropdown
 	    WebElement dropdown=driver.findElement(By.id("select3"));
+	    Thread.sleep(3000);
 	    //create object of select class
 	    Select S =new Select(dropdown);
-	    //use select by index
-	    S.selectByIndex(7);
-		
+	    for(int i=0; i<5; i++)
+	    { 
+	    	Thread.sleep(2000);
+	     S.selectByIndex(i);
+	    }
+	    //use getFirstSelectedOption
+	    System.out.println(S.getFirstSelectedOption().getText());
 
 	}
 
