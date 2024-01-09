@@ -19,7 +19,7 @@ public class deselectByVisibleTexxt {
 		// implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		// lunch the application
-		driver.get("//https:demoapp.qspiders.com/dropdown/multiselect?sublist=1");
+		driver.get("https://demoapp.qspiders.com/dropdown/multiselect?sublist=1");
 		// identify the multi-select dropdown
 		WebElement dropdown = driver.findElement(By.id("select-multiple-native"));
 		// create object of select class
