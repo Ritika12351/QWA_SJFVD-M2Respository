@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class Assigmentfordemoapp {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		// lunch the browser
 		WebDriver driver = new ChromeDriver();
@@ -24,6 +24,16 @@ public class Assigmentfordemoapp {
 		Actions act = new Actions(driver);
 		// use context click method
 		act.contextClick(driver.findElement(By.id("btn30"))).perform();
+		Thread.sleep(3000);
+		act.contextClick(driver.findElement(By.xpath("//div[text()='Yes']"))).perform();
+
+		act.contextClick(driver.findElement(By.id("btn31"))).perform();
+		Thread.sleep(3000);
+		act.contextClick(driver.findElement(By.xpath("//div[text()='Yes']"))).perform();
+
+		act.contextClick(driver.findElement(By.id("btn32"))).perform();
+		Thread.sleep(3000);
+		act.contextClick(driver.findElement(By.xpath("//div[text()='1']"))).perform();
 
 	}
 

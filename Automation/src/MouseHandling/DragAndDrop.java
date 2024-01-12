@@ -22,9 +22,10 @@ public class DragAndDrop {
 		driver.get("https://demoapps.qspiders.com/dragDrop/dragToCorrect?sublist=1");
 		Thread.sleep(3000);
 		//drag webelement
-		WebElement drag = driver.findElement(By.xpath("//div[text()='Moblie Charger']"));
+		WebElement drag = driver.findElement(By.xpath("//div[text()='Mobile Charger']"));
+		Thread.sleep(3000);
 		//drop weebelement
-		WebElement drop = driver.findElement(By.xpath("//div[text()='Moblie Accessories']"));
+		WebElement drop = driver.findElement(By.xpath("//div[text()='Mobile Accessories']"));
 	     Actions act=new Actions(driver);
 	     act.dragAndDrop(drag, drop).perform();
 		

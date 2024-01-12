@@ -21,21 +21,25 @@ public class DragAndDrop {
 		// lunch the application
 		driver.get("https://demoapps.qspiders.com/dragDrop/dragToCorrect?sublist=1");
 		// drag webelement
-		WebElement drag = driver.findElement(By.xpath("//div[text()='Moblie Charger']"));
+		WebElement drag = driver.findElement(By.xpath("//div[text()='Mobile Charger']"));
+		WebElement drop = driver.findElement(By.xpath("//div[text()='Mobile Accessories']"));
+		
 		// drop weebelement
-		WebElement drop = driver.findElement(By.xpath("//div[text()='Moblie Accessories']"));
-		driver.findElement(By.xpath("//div[text()='Laptop Charger']"));
-		// drop weebelement
-		driver.findElement(By.xpath("//div[text()='Moblie Accessories']"));
-		driver.findElement(By.xpath("//div[text()='Mobile Cover']"));
+		WebElement drag1 = driver.findElement(By.xpath("//div[text()='Laptop Charger']"));
+		WebElement drop2 = driver.findElement(By.xpath("//div[text()='Laptop Accessories']"));
+		
+		WebElement drag2 = driver.findElement(By.xpath("//div[text()='Mobile Cover']"));
+		WebElement drop1 = driver.findElement(By.xpath("//div[text()='Mobile Accessories']"));
+		
+		WebElement drag3 = driver.findElement(By.xpath("//div[text()='Laptop Cover']"));
+		WebElement drop3= driver.findElement(By.xpath("//div[text()='Laptop Accessories']"));
+	    Actions act=new Actions(driver);
+	    act.dragAndDrop(drag, drop).perform();
+			
 
-		driver.findElement(By.xpath("//div[text()='Moblie Accessories']"));
-		driver.findElement(By.xpath("//div[text()='Laptop Cover']"));
-		// drop weebelement
-		driver.findElement(By.xpath("//div[text()='Moblie Accessories']"));
 
-		Actions act = new Actions(driver);
-		act.dragAndDrop(drag, drop).perform();
+		
+
 
 	}
 
